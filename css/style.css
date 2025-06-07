@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+header {
+  height: 100vh;
+  width: 100%;
+  background: rgb(0, 97, 97);
+}
+
 main > section:nth-child(even) {
   height: 100vh;
   width: 100%;
@@ -14,4 +20,24 @@ main > section:nth-child(odd) {
   height: 100vh;
   width: 100%;
   background: lightblue;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.d-flex > img {
+  height: 300px;
+  width: 300px;
+  object-position: center;
+  object-fit: cover;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
