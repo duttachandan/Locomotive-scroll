@@ -4,45 +4,116 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- LocoMotive CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
     />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Aos Implementation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body data-scroll-container>
-    <header>Header</header>
-    <main>
-      <section>
-        <div class="container">
-          <div class="d-flex">
-            <img
+    <!-- Header Section -->
+    <header data-scroll-section>
+      <div class="container">
+        <div class="nav-wrpr">
+          <nav>
+            <div
+              class="nav-logo"
               data-scroll
-              data-scroll-speed="2"
-              data-scroll-direction="vertical"
-              src="https://images.unsplash.com/photo-1748968218568-a5eac621e65c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
-              alt=""
-            />
-
-            <img
-              data-scroll
-              data-scroll-speed="3"
               data-scroll-direction="horizontal"
-              src="https://images.unsplash.com/photo-1749288752497-5fb00d855426?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
+              data-scroll-speed="-0.5"
+            >
+              <a href="index.html">Locomotive.ca</a>
+            </div>
+            <div class="nav-collapse">
+              <ul>
+                <li>v4.x-Edition</li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main data-scroll-section>
+      <section class="banner-section">
+        <div class="container">
+          <div class="banner-wrpr">
+            <h1 data-scroll>
+              <span
+                data-aos="flip-up"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                >Locomotive</span
+              >
+              <br />
+              <span
+                data-aos="flip-up"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                >scroll</span
+              >
+              <br />
+              <span
+                data-scroll
+                data-scroll-speed="-0.5"
+                data-aos="flip-up"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                >V</span
+              >
+              <span
+                data-scroll
+                data-scroll-speed="0.5"
+                data-aos="flip-up"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                >4</span
+              >
+              <span
+                data-scroll
+                data-scroll-speed="-0.5"
+                data-aos="flip-up"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                >.</span
+              >
+              <span
+                data-scroll
+                data-scroll-speed="-0.5"
+                data-aos="flip-up"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+                >x</span
+              >
+            </h1>
           </div>
         </div>
       </section>
-      <section>Section2</section>
-      <section>Section3</section>
-      <section>Section4</section>
+      <section class="direction-section">
+        <div class="container"></div>
+      </section>
+      <section style="height: 100vh">
+        <img
+          height="300"
+          width="300"
+          style="object-fit: cover;"
+          data-scroll
+          data-scroll-speed="4"
+          src="https://images.unsplash.com/photo-1730504805449-e4a644092e81?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
+          alt=""
+        />
+      </section>
     </main>
-    <footer>Footer Section</footer>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- Locomotive JS -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <!-- vanila JS  -->
     <script src="./js/index.js"></script>
   </body>
 </html>

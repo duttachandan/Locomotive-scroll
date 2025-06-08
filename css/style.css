@@ -1,43 +1,195 @@
+@font-face {
+  font-family: Neue;
+  src: url("../assets/font/NeueMontreal-Regular.otf");
+}
+@font-face {
+  font-family: Neue-mediuem;
+  src: url("../assets/font/NeueMontreal-Medium.otf");
+}
+@font-face {
+  font-family: Neue-light;
+  src: url("../assets/font/NeueMontreal-Light.otf");
+}
+
+@font-face {
+  font-family: Neue-bold;
+  src: url("../assets/font/NeueMontreal-Bold.otf");
+}
+
+@font-face {
+  font-family: Neue-light-italic;
+  src: url("../assets/font/NeueMontreal-LightItalic.otf");
+}
+
+@font-face {
+  font-family: Neue-bold-italic;
+  src: url("../assets/font/NeueMontreal-BoldItalic.otf");
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-header {
-  height: 100vh;
-  width: 100%;
-  background: rgb(0, 97, 97);
+:root {
+  --primary-color: rgb(212, 202, 201);
+  --secondary-color: black;
+  --tertiary-color: white;
 }
 
-main > section:nth-child(even) {
-  height: 100vh;
-  width: 100%;
-  background: cyan;
+/*
+=================
+Common Classes 
+=================
+*/
+
+[data-scroll-container] {
+  will-change: transform;
 }
 
-main > section:nth-child(odd) {
-  height: 100vh;
-  width: 100%;
-  background: lightblue;
+body {
+  /* overflow-x: hidden; */
+  background: var(--primary-color);
+  font-family: Neue, sans-serif;
+  user-select: none;
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1995px;
   margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.row > * {
   padding: 0 15px;
 }
 
-.d-flex > img {
-  height: 300px;
-  width: 300px;
-  object-position: center;
-  object-fit: cover;
+ul {
+  list-style: none;
 }
 
-.d-flex {
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none !important;
+}
+
+h1,
+.title {
+  font-size: 10rem;
+}
+
+h2,
+.title2 {
+  font-size: 2.5rem;
+}
+
+h3,
+.title3 {
+  font-size: 2.2rem;
+}
+
+/*
+===================
+Header Section 
+===================
+*/
+
+.header {
+  padding: 0.5rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: Neue, sans-serif;
+}
+
+nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+}
+.nav-logo {
+  transform: none;
+}
+
+.nav-logo > a {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: Neue, sans-serif;
+}
+
+.nav-collapse {
+  flex-grow: 2;
+}
+
+.nav-collapse > ul {
+  margin-left: auto;
+  width: fit-content;
+}
+
+.nav-collapse > ul > li {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+/* 
+=====================
+    Banner Section
+=====================
+*/
+
+.banner-section {
+  min-height: 702px;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: crosshair;
+}
+
+.banner-wrpr {
+  padding: 40px 0;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.banner-wrpr > h1 {
+  text-transform: uppercase;
+  font-family: Neue;
+}
+
+.banner-wrpr > h1 > span[data-scroll] {
+  color: var(--tertiary-color);
+}
+
+span {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1200px) {
+  h1,
+  .title1 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  h1,
+  .title1 {
+    font-size: 2.5rem;
+  }
+  /* Header Section */
+  .nav-logo > a {
+    font-size: 18px;
+  }
+  .nav-collapse > ul > li {
+    font-size: 14px;
+  }
 }
