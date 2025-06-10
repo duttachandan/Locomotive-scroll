@@ -72,6 +72,16 @@ body {
   padding: 0 15px;
 }
 
+.col-50 {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.col-40 {
+  width: 40%;
+  padding: 0 15px;
+}
+
 ul {
   list-style: none;
 }
@@ -97,14 +107,18 @@ h3,
   font-size: 2.2rem;
 }
 
+span {
+  display: inline-block;
+}
+
 /*
 ===================
 Header Section 
 ===================
 */
 
-.header {
-  padding: 0.5rem 0;
+header {
+  padding: 15px 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -147,7 +161,7 @@ nav {
 */
 
 .banner-section {
-  min-height: 702px;
+  min-height: 502px;
   padding: 0.5rem 0;
   display: flex;
   justify-content: start;
@@ -169,14 +183,78 @@ nav {
   color: var(--tertiary-color);
 }
 
-span {
-  display: inline-block;
+/*
+=============
+Direction Section 
+=============
+*/
+
+.direction-section {
+  padding: 15px 0;
+}
+
+.direction-section > div > div.row {
+  justify-content: space-between;
+}
+
+.direction-content {
+  font-size: 1.125rem;
+  font-weight: 600;
+  word-spacing: 5px;
+  max-width: 320px;
+}
+
+.nav-links {
+  border-bottom: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 2rem;
+  font-family: Neue-medium;
+  transition: all 0.3s linear;
+}
+
+.nav-links:hover {
+  color: white;
+}
+
+.nav-links > span {
+  margin-left: auto;
+}
+
+/* Speed Control */
+
+#speed-control {
+  padding: 200px 0;
+}
+
+.sc-img {
+  max-width: 100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 1200px) {
   h1,
   .title1 {
     font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .col-40 {
+    width: 100%;
+  }
+  .col-50 {
+    width: 100%;
+  }
+  /* Direction Section */
+  .direction-content {
+    margin-bottom: 1.875rem;
+  }
+  /* Speed Control Section */
+  .sc-content {
+    margin-bottom: 40px;
   }
 }
 
@@ -192,4 +270,5 @@ span {
   .nav-collapse > ul > li {
     font-size: 14px;
   }
+  /* Direction Section */
 }

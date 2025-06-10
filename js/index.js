@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const scroll = new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
     smooth: true,
-    smoothMobile: true,
-    tablet: { smooth: true },
+    // smoothMobile: true,
+    // tablet: { smooth: true },
     smartphone: { smooth: true },
   });
 });
